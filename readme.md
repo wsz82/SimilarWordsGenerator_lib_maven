@@ -9,11 +9,17 @@ Builder design pattern is used for creating parameters for Generator.
 
 ## Installation
 
-The project uses Java SDK 12 and JUnit 5.4.2<br/> 
+The project uses Java SDK 12 and JUnit 5<br/> 
 For tests add in VM configurations:<br/>
  -Ddir.test.files="projectRoot\src\test\files"
 
 ## Usage
+
+<dependency>
+  <groupId>io.github.wsz82</groupId>
+  <artifactId>similar-words-generator</artifactId>
+  <version>1.0</version>
+</dependency>
 
 Access through Controller class. The library is to be implemented in JavaFX application and REST API by me (wsz82). Other usages can be found.
 
