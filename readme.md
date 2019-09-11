@@ -23,7 +23,7 @@ For tests add in VM configurations:<br/>
 </dependency>
 ```
 
-Access through Controller class. The library is to be implemented in JavaFX application and REST API by me (wsz82). Other usages can be found.
+Access through Controller class. The library is implemented in JavaFX application (https://github.com/wsz82/SimilarWordsGenerator_desktop_application) and is to be implemented in REST API by me (wsz82). Other usages can be found.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
