@@ -15,11 +15,13 @@ For tests add in VM configurations:<br/>
 
 ## Usage
 
+```xml
 <dependency>
   <groupId>io.github.wsz82</groupId>
   <artifactId>similar-words-generator</artifactId>
-  <version>1.0</version>
+  <version>1.1</version>
 </dependency>
+```
 
 Access through Controller class. The library is to be implemented in JavaFX application and REST API by me (wsz82). Other usages can be found.
 
