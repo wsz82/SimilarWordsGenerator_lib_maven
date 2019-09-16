@@ -25,6 +25,11 @@ public class Controller {
         saver.save(generator.getAnalyser(), path);
     }
 
+    public Analyser loadSeed(String path) {
+        LoaderSeed loaderSeed = new LoaderSeed();
+        return loaderSeed.load(path);
+    }
+
     public void export(List<String> listOfWords, String path) {
         WordsExport wordsExport = new WordsExport();
         wordsExport.export(listOfWords, path);
