@@ -6,7 +6,7 @@
 
   <groupId>io.github.wsz82</groupId>
   <artifactId>similar-words-generator</artifactId>
-  <version>1.1</version>
+  <version>1.2</version>
   <packaging>jar</packaging>
 
   <name>similar-words-generator</name>

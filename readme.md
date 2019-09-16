@@ -19,11 +19,11 @@ For tests add in VM configurations:<br/>
 <dependency>
   <groupId>io.github.wsz82</groupId>
   <artifactId>similar-words-generator</artifactId>
-  <version>1.1</version>
+  <version>1.2</version>
 </dependency>
 ```
 
-Access through Controller class. The library is implemented in JavaFX application (https://github.com/wsz82/SimilarWordsGenerator_desktop_application) and is to be implemented in REST API by me (wsz82). Other usages can be found.
+Access through Controller class. Parameters can be set through ProgramParameters. The library is implemented in JavaFX desktop application (https://github.com/wsz82/SimilarWordsGenerator_desktop_application_JavaFX) and web application (https://github.com/wsz82/SimilarWordsGenerator_Rest_API_Spring).
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
