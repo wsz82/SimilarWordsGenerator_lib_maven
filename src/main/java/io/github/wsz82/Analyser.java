@@ -3,7 +3,7 @@ package io.github.wsz82;
 import java.io.Serializable;
 import java.util.*;
 
-class Analyser implements Serializable{
+public class Analyser implements Serializable{
     private int hashOfInput;
     private List<Integer> wordsLengths = new ArrayList<>();
     private List<Character> firstChars = new ArrayList<>();
@@ -11,7 +11,7 @@ class Analyser implements Serializable{
     //For each unique char analyser counts occurrences of next char in the whole data
     private Map<Character, ArrayList<Character>> charsCount = new HashMap<>();
 
-    Analyser () {
+    public Analyser () {
     }
 
     void analyze (List<String> input) {
@@ -165,7 +165,7 @@ class Analyser implements Serializable{
         return tempWordLengths;
     }
 
-    int getHashOfInput() {
+    public int getHashOfInput() {
         return hashOfInput;
     }
 
