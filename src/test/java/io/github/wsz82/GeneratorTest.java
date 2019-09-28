@@ -1,10 +1,13 @@
 package io.github.wsz82;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
+import java.net.URL;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -13,10 +16,10 @@ import java.util.Set;
 import static org.junit.jupiter.api.Assertions.*;
 
 class GeneratorTest {
-    private ProgramParameters.Builder parametersBuilder;
-    private ProgramParameters parameters;
-    private Generator generator;
-    private String testDir = System.getProperty("dir.test.files");
+    private static ProgramParameters.Builder parametersBuilder;
+    private static ProgramParameters parameters;
+    private static Generator generator;
+    private static String testDir;
 
 /*  default parameters:
 
@@ -31,6 +34,13 @@ class GeneratorTest {
     minWordLength = 0;  //number 0 is a flag for default word length
     maxWordLength = 0;  //number 0 is a flag for default word length
     levelOfCompression = 0; //number 0 is a flag for non-compression*/
+
+    @BeforeAll
+    static void init() throws Exception {
+        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+        URL pathURL = classLoader.getResource("files");
+        testDir = Paths.get(pathURL.toURI()).toAbsolutePath().toString();
+    }
 
     @BeforeEach
     void setParameters() {

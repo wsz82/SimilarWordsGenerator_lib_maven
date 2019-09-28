@@ -9,9 +9,7 @@ Builder design pattern is used for creating parameters for Generator.
 
 ## Installation
 
-The project uses Java SDK 12 and JUnit 5<br/> 
-For tests add in VM configurations:<br/>
- -Ddir.test.files="projectRoot\src\test\files"
+The project uses Java SDK 12 and JUnit 5<br/>
 
 ## Usage
 

@@ -1,27 +1,35 @@
 package io.github.wsz82;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.io.*;
+import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Paths;
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class WordsExportTest {
-    private String testDir = System.getProperty("dir.test.files");
-    private List<String> input = Arrays.asList("John", "Nancy", "Stacy");
-    private Set<String> output;
-    private Generator generator = new Generator();
-    private ProgramParameters.Builder parametersBuilder = new ProgramParameters.Builder();
-    private ProgramParameters parameters;
-    private WordsExport wordsExport = new WordsExport();
+    private static String testDir;
+
+    @BeforeAll
+    static void init() throws Exception {
+        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+        URL pathURL = classLoader.getResource("files");
+        testDir = Paths.get(pathURL.toURI()).toAbsolutePath().toString();
+    }
 
     @Test
     void fileContainsOutputAfterExporting() {
+        Generator generator = new Generator();
+        WordsExport wordsExport = new WordsExport();
+        ProgramParameters.Builder parametersBuilder = new ProgramParameters.Builder();
+        List<String> input = Arrays.asList("John", "Nancy", "Stacy");
         parametersBuilder.setInput(input);
-        parameters = parametersBuilder.build();
-        output = generator.generate(parameters, Controller.GenerateSource.NEW_ANALYSER);
+        ProgramParameters parameters = parametersBuilder.build();
+        Set<String> output = generator.generate(parameters, Controller.GenerateSource.NEW_ANALYSER);
         wordsExport.export(new ArrayList<>(output), testDir + File.separator + "exported.txt");
 
         Set<String> loaded = new HashSet<>();
