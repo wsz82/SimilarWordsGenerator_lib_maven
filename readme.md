@@ -17,11 +17,11 @@ The project uses Java SDK 12 and JUnit 5<br/>
 <dependency>
   <groupId>io.github.wsz82</groupId>
   <artifactId>similar-words-generator</artifactId>
-  <version>1.2</version>
+  <version>1.0</version>
 </dependency>
 ```
 
-Access through Controller class. Parameters can be set through ProgramParameters. The library is implemented in JavaFX desktop application (https://github.com/wsz82/SimilarWordsGenerator_desktop_application_JavaFX) and web application (https://github.com/wsz82/SimilarWordsGenerator_Rest_API_Spring).
+Access through Controller class. Parameters can be set through ProgramParameters. The library is implemented in JavaFX desktop application (https://github.com/wsz82/SimilarWordsGenerator_desktop_application_JavaFX), web service (https://github.com/wsz82/SimilarWordsGenerator_Rest_API_Spring) and web application (https://github.com/wsz82/SimilarWordsGenerator_web_application_Spring).
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
