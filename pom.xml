@@ -6,7 +6,7 @@
 
   <groupId>io.github.wsz82</groupId>
   <artifactId>similar-words-generator</artifactId>
-  <version>1.0</version>
+  <version>2.0</version>
   <packaging>jar</packaging>
 
   <name>similar-words-generator</name>
@@ -41,9 +41,15 @@
 
   <dependencies>
     <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.10</version>
+    </dependency>
+
+    <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter</artifactId>
-      <version>5.4.2</version>
+      <version>5.9.0</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

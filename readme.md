@@ -1,32 +1,38 @@
 # Similar Words Generator
 
-It is a maven project to make a library for generating words similar to given input.
+A library for generating words similar to given input.
 
 ## Description
 
-There are two core classes: Analyser and Generator. First is responsible for analysing an input, second makes new words.
-Builder design pattern is used for creating parameters for Generator.
+There are two core classes: Seed and WordsGenerator. First is responsible for keeping data to generate output, second
+generates output. GenerateParameters object is used to specify expected output.
 
 ## Installation
 
-The project uses Java SDK 12 and JUnit 5<br/>
+The project uses Java SDK 17<br/>
 
 ## Usage
 
 ```xml
+
 <dependency>
-  <groupId>io.github.wsz82</groupId>
-  <artifactId>similar-words-generator</artifactId>
-  <version>1.0</version>
+    <groupId>io.github.wsz82</groupId>
+    <artifactId>similar-words-generator</artifactId>
+    <version>2.0</version>
 </dependency>
 ```
 
-Access through Controller class. Parameters can be set through ProgramParameters. The library is implemented in JavaFX desktop application (https://github.com/wsz82/SimilarWordsGenerator_desktop_application_JavaFX), web service (https://github.com/wsz82/SimilarWordsGenerator_Rest_API_Spring) and web application (https://github.com/wsz82/SimilarWordsGenerator_web_application_Spring).
+Pass list with words to Seed and generate new words with WordsGenerator. The library is used in:
+
+- desktop application (https://github.com/wsz82/SimilarWordsGenerator_desktop_application_JavaFX)
+- web application (https://github.com/wsz82/SimilarWordsGenerator_web_application_Spring).
 
 ## Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)
